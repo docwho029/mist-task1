@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Windows Home Page </title>
     <link rel="stylesheet" href="./style.css"></style>
+    <script src="https://kit.fontawesome.com/89ed672dd3.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -21,8 +22,13 @@
         <nav class="taskbar">
             <div class="taskbar-items">
                 <div class="taskbar-item"></div>
-                <div class="taskbar-item" id="search" ></div>
-                <div class="taskbar-item"></div>
+                <div class="taskbar-item" id="search" >
+                    <form class="search-bar" action="/auth" method="post">
+                        <input placeholder="Search" type="text" name="search" id="" class="search-text">
+                        <button type="submit" class="search-button">S</button>
+                    </form>
+                </div>
+                <div class="taskbar-item"> <i class="fa-brands fa-whatsapp"></i> </div>
                 <div class="taskbar-item"></div>
                 <div class="taskbar-item"></div>
             </div>

@@ -65,6 +65,10 @@ nav.taskbar {
     height: 7vh;
     width: 7vh;
     border-radius: 50%;
+    border: 1px solid #FAF8F1;
+    transition: 
+        background-color 0.2s ease,
+        backdrop-filter 0.2s ease 0.4s;
 }
 
 .app {
@@ -75,6 +79,8 @@ nav.taskbar {
 
 .app:hover , .taskbar-item:hover {
     cursor: pointer;
+    background-color: rgba(250, 248, 241, 0.16);
+    backdrop-filter: blur(50px);
 } 
 
 .taskbar-items {
@@ -95,4 +101,46 @@ nav.taskbar {
 #search {
     width : 45vh;
     border-radius: 10vh;
+    display: flex;
+    align-items: center;
 }
+
+.search-text::placeholder {
+    color: #334443;
+    transition: color 0.3s ease;
+}
+
+form.search-bar:hover .search-text::placeholder {
+    color: #FAF8F1;
+}
+
+form.search-bar, .search-text, .search-button {
+    outline: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    background: none;
+    height: 100%;
+    all: unset;
+}
+
+form.search-bar {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.search-text {
+    padding-left: 1em;
+    height: 7vh;
+    width: auto;
+    color: #FAF8F1;
+}
+
+.search-button {
+    /* border-left: 0.1px solid #334443; */
+    height: 7vh;
+    width: 3em;
+    text-align: center;
+}
+
